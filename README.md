@@ -16,3 +16,8 @@
 
 ### Week 2. Linux system and commands
 - Homework #1  
+
+### Week 3. C++ practice
+
+### Week 4. C++ practice
+- Homework #2

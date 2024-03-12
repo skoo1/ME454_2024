@@ -14,7 +14,7 @@ int append(MyList *p_list, int item);
 int insert(MyList *p_list, int item, int index);
 int max(MyList *p_list);
 int pop(MyList *p_list, int index);
-int sort(MyList *p_list);
+// int sort(MyList *p_list);
 void display(MyList *p_list);
 
 #endif

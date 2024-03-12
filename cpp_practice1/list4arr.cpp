@@ -41,7 +41,7 @@ int main()
 
         cout << max(&my_list) << endl;
 
-        sort(&my_list);
+        // sort(&my_list);
         display(&my_list);
         
     }

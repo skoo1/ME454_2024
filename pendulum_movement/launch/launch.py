@@ -51,23 +51,42 @@ def generate_launch_description():
 			launch_arguments={'gz_args': '-g -v4 '}.items()
 		)
 
+	# Node that creates entity (previously as known as spawner)
+	# create: Usage: create -world [arg] [-file FILE] [-param PARAM] [-topic TOPIC]
+	#                        [-string STRING] [-name NAME] [-allow_renaming RENAMING] [-x X] [-y Y] [-z Z]
+	#                        [-R ROLL] [-P PITCH] [-Y YAW]
+
 	gz_spawn_pendulum = Node(
 		package='ros_gz_sim',
 		executable='create',
 		arguments=[
 			'-name', 'pendulum',
 			'-file', model_path,
-			'-z', '2.0'
+			'-z', '2.0',
+			'-P', '0.5'
 		],
 		output='screen',
 	)
-
+	
+	gz_ros_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=[
+            # Velocity and odometry (Gazebo <-> ROS2)
+            '/world/default/model/pendulum/joint_state@sensor_msgs/msg/JointState[gz.msgs.Model',
+        ],
+		remappings=[
+			('/world/default/model/pendulum/joint_state', 'joint_states')
+		],
+        output='screen'
+    )
 
 	return LaunchDescription([
 
 		gz_server,
 		gz_client,
-		gz_spawn_pendulum
+		gz_spawn_pendulum,
+		gz_ros_bridge
 
 	])
 

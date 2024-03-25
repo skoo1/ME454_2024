@@ -146,7 +146,7 @@ Mat33::Mat33(  double e00, double e01, double e02,
 {
     m_rows = 3;
     m_cols = 3;
-    // Implement diagonal matrix initialization (optional, this will not be evaluated.)
+    // Implement matrix initialization (optional, this will not be evaluated.)
 }
 
 // Transpose matrix calculation
@@ -228,6 +228,16 @@ Mat33 Vec3::skew()
     // TODO : Implement skew symmetric matrix calculation
 
     return mat;
+}
+
+// Skew symmetric matrix calculation
+// Returns the skew symmetric matrix of [this]
+double Vec3::squarednorm()
+{
+    double val = 0.0;
+    // TODO : Implement squared norm calculation (optional, this will not be evaluated.)
+
+    return val;
 }
 
 // Vector visualization

@@ -69,6 +69,7 @@ class Vec3 : public MatBase
         double dot(const Vec3 &vec); // dot product
         Vec3 cross(const Vec3 &vec); // cross product
         Mat33 skew(); // cross product of two vectors
+        double squarednorm(); // squared norm (optional)
 
         void display(); // vector visualization (optional)
 };

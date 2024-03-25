@@ -235,7 +235,7 @@ Mat33 Vec3::skew()
 double Vec3::squarednorm()
 {
     double val = 0.0;
-    // TODO : Implement squared norm calculation (optional, this will not be evaluated.)
+    // Implement squared norm calculation (optional, this will not be evaluated.)
 
     return val;
 }

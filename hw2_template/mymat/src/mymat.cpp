@@ -230,8 +230,8 @@ Mat33 Vec3::skew()
     return mat;
 }
 
-// Skew symmetric matrix calculation
-// Returns the skew symmetric matrix of [this]
+// Squared norm calculation
+// Returns the squared norm of [this]
 double Vec3::squarednorm()
 {
     double val = 0.0;

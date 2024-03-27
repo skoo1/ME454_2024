@@ -32,8 +32,10 @@ def generate_launch_description():
 	robot_name_in_model = 'bowling_pin'
 	rviz_config_file_path = 'rviz/urdf_gazebo_config.rviz'
 
-	pin_urdf_file_path = 'rsc/urdf/pin.urdf'
-	ball_urdf_file_path = 'rsc/urdf/bowl.urdf'
+	# Declare urdf file name to load
+	pin_model_file_name = 'rsc/urdf/pin.urdf'
+	ball_model_file_name = 'rsc/urdf/bowl.urdf'
+	
 	world_file_path = 'worlds/bowling.world'
 
 	spawn_x_val_ball = '15.0'
@@ -86,8 +88,8 @@ def generate_launch_description():
 
 	pkg_gazebo_ros = FindPackageShare(package='gazebo_ros').find('gazebo_ros')   
 	pkg_share = FindPackageShare(package=package_name).find(package_name)
-	default_urdf_pin_model_path = os.path.join(pkg_share, pin_urdf_file_path)
-	default_urdf_ball_model_path= os.path.join(pkg_share, ball_urdf_file_path)
+	default_urdf_pin_model_path = os.path.join(pkg_share, pin_model_file_name)
+	default_urdf_ball_model_path= os.path.join(pkg_share, ball_model_file_name)
 
 
 

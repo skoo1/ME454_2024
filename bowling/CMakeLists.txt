@@ -25,7 +25,6 @@ install(DIRECTORY
   launch
   rsc
   worlds
-  media
   DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)

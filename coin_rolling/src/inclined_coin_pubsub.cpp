@@ -39,9 +39,9 @@ private:
         // Calculate the angular momentum vector of the rolling coin on the world frame
         // and publiseh the answer.
 
-        angular_momentum.x = 0.0;
-        angular_momentum.y = 0.0;
-        angular_momentum.z = 0.0;
+        message_momentum.x = 0.0;
+        message_momentum.y = 0.0;
+        message_momentum.z = 0.0;
 
         //////////////// TODO End ////////////////
 

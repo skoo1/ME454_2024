@@ -23,3 +23,5 @@
 - Homework #2
 
 ### Week 5. ROS Compile
+
+### Week 6. Topics/Gazebo Messages/Pub-subscriber

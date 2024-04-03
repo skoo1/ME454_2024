@@ -154,12 +154,6 @@ def generate_launch_description():
 					'-z', spawn_z_val_coin,
 					'-P', spawn_pitch_val_coin],
                     output='screen')
-	test_subscriber_cmd = Node(
-		package='coin_rolling',
-		executable='test_subscriber',
-		output='screen',
-		name="coin_task_checker"
-	)
 	coin_subscriber_cmd = Node(
 		package='coin_rolling',
 		executable='coin_subscriber',
@@ -183,6 +177,7 @@ def generate_launch_description():
 	ld.add_action(start_gazebo_client_cmd)
 
 	ld.add_action(spawn_coin_cmd)
+	ld.add_action(coin_subscriber_cmd)
 	ld.add_action(start_robot_state_publisher_cmd)
  
 	return ld

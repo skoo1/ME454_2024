@@ -3,7 +3,6 @@
 
 int main()
 {
-    // feel free to test your function.
     Quaternion q(1,2,3,4);
     Vec3 omega(1,2,3);
     q.normalized();
@@ -18,6 +17,10 @@ int main()
     q = quatmulquat(q1, q2);
     q.normalized();
     q.display();
+    Vec3 v1(1,2,3);
+    Vec3 v2;
+    v2 = vecRotatedByQuat(v1, q1);
+    v2.display();
     Mat33 mat1 = quat2mat(q);
     mat1.display();
     q = mat2quat(mat1);
@@ -25,15 +28,19 @@ int main()
     q.display();
 
     /// Above sample test cases are printed like below
-    //Quaternion : {w : 0.182574, x : 0.365148, y : 0.547723, z : 0.730297}
-    //Quaternion : {w : 0.982551, x : 0.0497088, y : 0.0994177, z : 0.149127}
-    //Quaternion : {w : 0.5, x : -0.5, y : 0.5, z : 0.5}
-    //Matrix :
-    //0       -1      0
-    //0       0       1
-    //                -1      0       0
-    //
-    //Quaternion : {w : 0.5, x : -0.5, y : 0.5, z : 0.5}
-
+//    Quaternion : {w : 0.182574, x : 0.365148, y : 0.547723, z : 0.730297}
+//    Quaternion : {w : 0.982551, x : 0.0497088, y : 0.0994177, z : 0.149127}
+//    Quaternion : {w : 0.5, x : -0.5, y : 0.5, z : 0.5}
+//    Vector :
+//    -2
+//    1
+//    3
+//
+//    Matrix :
+//    0       -1      0
+//    0       0       1
+//    -1      0       0
+//
+//    Quaternion : {w : 0.5, x : -0.5, y : 0.5, z : 0.5}
     return 0;
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot name="earth">
+    <link name="base_link">
+        <visual>
+		    <origin rpy="0.0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <!--cylinder radius="0.5" length="0.001"/-->
+                <mesh filename="package://earth_dae.dae"/>
+            </geometry>
+        </visual>
+        <!--collision>
+            <geometry>
+                <cylinder radius="0.8" length="0.001"/>
+            </geometry>
+        </collision-->
+    </link>
+    <link name="dummy">
+            <inertial>
+                <mass value="10"/>
+                <inertia ixx="120.7" ixy="0.0" ixz="0.0" iyy="120.7" iyz="0.0" izz="120.7"/>
+            </inertial>
+    </link>
+    <joint name="dummy_to_base_link=" type="fixed">
+        <parent link="dummy"/>
+         <child link="base_link"/>
+    </joint>
+    <gazebo reference="base_link">
+        <collision name='base_link_collision'>
+        <surface>
+        <friction>
+        <ode>
+        <mu>1000</mu>
+        <mu2>1000</mu2>
+        <fdir1>0 0 0</fdir1>
+        </ode>
+        </friction>
+        <contact>
+        <ode>
+        <kp>1e+13</kp>
+        <kd>1</kd>
+        <max_vel>10.0</max_vel>
+        </ode>
+        </contact>
+        <bounce>
+        <restitution_coefficient>0.0</restitution_coefficient>
+        <threshold>0.00</threshold>
+        </bounce>
+        </surface>
+        </collision>
+    </gazebo>
+</robot>

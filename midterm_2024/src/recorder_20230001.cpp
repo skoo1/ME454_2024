@@ -53,7 +53,7 @@ private:
         //////////////// TODO End ////////////////
         cnt = cnt + 1;
         // subscription rate would be 10Hz -> total 1000 sec
-        // if not, try to control below count
+        // If your environment is very slow, try to control below count to record more than 1000 sec
         if( cnt == 10000) {
             p_results.close();
             q_results.close();

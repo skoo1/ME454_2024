@@ -34,6 +34,7 @@ Quaternion getQuaternionBetweenTimeStep(Vec3 w, double delta_t);
 Quaternion quatmulquat(Quaternion q1, Quaternion q2);
 
 // return rotated vector by quaternion
+// Do not use rotation matrix concept. 
 Vec3 vecRotatedByQuat(Vec3 v, Quaternion q);
 
 // return quaternion that is converted from rotation matrix

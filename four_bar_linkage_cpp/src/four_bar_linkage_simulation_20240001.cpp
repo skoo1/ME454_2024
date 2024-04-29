@@ -131,6 +131,7 @@ int main()
 {
     std::ofstream q_results("q_results_cpp.csv");
     std::ofstream qdot_results("qdot_results_cpp.csv");
+    std::ofstream constraint_error_results("constraint_error_cpp.csv");
 
     double h = 0.001; // simulation timestep, 0.001 seconds (1 ms)
     int n_sim = 50000; // number of simulation steps (1000 s)
@@ -164,6 +165,10 @@ int main()
             // TODO: record qdot_results_cpp.csv contains the value of the angular velocity qdot1, qdot2, and qdot3 in radian (qdot1,qdot2,qdot3)
 
             qdot_results <<"\n";
+
+            // TODO: record constraint_error_cpp.csv contains the constraint error at this time step (error1,error2,...)
+
+            constraint_error_results << "\n";
         }
         //////////////// TODO end ////////////////
         t = t + h;
@@ -173,6 +178,7 @@ int main()
     // close the file
     q_results.close();
     qdot_results.close();
+    constraint_error_results.close();
 
     return 0;
 }

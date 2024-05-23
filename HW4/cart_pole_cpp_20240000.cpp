@@ -47,7 +47,7 @@ public:
         ////////////////// TODO END //////////////////
 
         // loogging
-        logger.log(h * count, theta2, x1, F);
+        logger.log(h * count, x1, theta2, F);
         count++;
     }
 

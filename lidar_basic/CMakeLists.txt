@@ -24,7 +24,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
 # external library (pcl)
-find_package(PCL 1.14 REQUIRED)
+find_package(PCL 1.8 REQUIRED)
 
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})

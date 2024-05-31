@@ -13,4 +13,3 @@ macro(macro1 arg)
 endmacro()
 
 macro1(20240001)
-macro1(solution)

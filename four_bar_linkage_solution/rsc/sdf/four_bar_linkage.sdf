@@ -69,9 +69,9 @@
       <pose relative_to='second_joint'>0 0 0 0.3533 0 0</pose>
       <inertial>
         <pose>0 2.0 0 0 0 0</pose>
-        <mass>1</mass>
+        <mass>4</mass>
         <inertia>
-          <ixx>1.33333</ixx>
+          <ixx>5.33333</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyy>0</iyy>
@@ -106,9 +106,9 @@
       <pose relative_to='third_joint'>0 0 0 -1.8767 0 0</pose>
       <inertial>
         <pose>0 1.25 0 0 0 0</pose>
-        <mass>1</mass>
+        <mass>2.5</mass>
         <inertia>
-          <ixx>0.5208</ixx>
+          <ixx>1.3021</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyy>0</iyy>

@@ -32,7 +32,7 @@ void initialize(){
     y1_init_ = L1_*cos(q1_init_);
     z1_init_ = L1_*sin(q1_init_);
 
-    m2_ = 1.0;
+    m2_ = 4.0;
     L2_ = 2.0;
     ixx2_ = (1.0/3.0)*m2_*pow((2*L2_),2);
     iyy2_ = 0.0;
@@ -42,7 +42,7 @@ void initialize(){
     y2_init_ = 2*L1_*cos(q1_init_) + L2_*cos(q2_init_);
     z2_init_ = 2*L1_*sin(q1_init_) + L2_*sin(q2_init_);
 
-    m3_ = 1.0;
+    m3_ = 2.5;
     L3_ = 1.25;
     ixx3_ = (1.0/3.0)*m3_*pow((2*L3_),2);
     iyy3_ = 0.0;
@@ -262,7 +262,7 @@ int main()
         current_qddot = M_inv_*(Fext + Fc);
         Eigen::VectorXd qdot_prev = qdot;
         qdot = qdot + h*current_qddot;
-        q = q + h*qdot_prev;
+        q = q + h*qdot;
 
         if (i_sim % rec_steps == 0)
         {

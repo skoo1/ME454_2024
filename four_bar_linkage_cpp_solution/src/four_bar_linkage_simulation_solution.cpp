@@ -24,7 +24,7 @@ void initialize(){
 
     m1_ = 1.0;
     L1_ = 0.5;
-    ixx1_ = (1.0/3.0)*m1_*pow((2*L1_),2);
+    ixx1_ = (1.0/12.0)*m1_*pow((2*L1_),2);
     iyy1_ = 0.0;
     izz1_ = 0.0;
     q1_init_ = 1.578;
@@ -34,7 +34,7 @@ void initialize(){
 
     m2_ = 4.0;
     L2_ = 2.0;
-    ixx2_ = (1.0/3.0)*m2_*pow((2*L2_),2);
+    ixx2_ = (1.0/12.0)*m2_*pow((2*L2_),2);
     iyy2_ = 0.0;
     izz2_ = 0.0;
     q2_init_ = 0.3533;
@@ -44,7 +44,7 @@ void initialize(){
 
     m3_ = 2.5;
     L3_ = 1.25;
-    ixx3_ = (1.0/3.0)*m3_*pow((2*L3_),2);
+    ixx3_ = (1.0/12.0)*m3_*pow((2*L3_),2);
     iyy3_ = 0.0;
     izz3_ = 0.0;
     q3_init_ = 1.2649;
@@ -153,10 +153,6 @@ Eigen::VectorXd calculate_Fext(Eigen::VectorXd q){
     Fext(1) = -m1_*g;
     Fext(4) = -m2_*g;
     Fext(7) = -m3_*g;
-
-    Fext(2) = -m1_*g*L1_*cos(q(2));
-    Fext(5) = -m2_*g*L2_*cos(q(5));
-    Fext(8) = -m3_*g*L3_*cos(q(8));
 
     ////////////////// TODO END //////////////////////
     return Fext;

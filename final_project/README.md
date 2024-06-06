@@ -1,5 +1,6 @@
 Only gravity ( y<sub>acceleration</sub> = -9.81 m/s<sup>2</sup> ) will be applied to the system.  
 Point P in each link's local coordinate becomes joint's initial position.  
 Point Q in each link's local coordinate is on translational axis (prismatic joint).  
-axis angle of crack-shaft system's prismatic joint is modified to 0.0 for week9 practice session condition.  
-joint position between 0th link and 1st link is modified for complete constraint condition for week9 practice session condition.  
+2023.06.06
+Axis angle of crack-shaft system's prismatic joint is modified to 0.0 for same week9 practice session's condition.  
+Joint position between 0th link and 1st link is modified for complete constraint condition for week9 practice session's condition.  

@@ -46,7 +46,7 @@ int main(void)
     //LinkConfig.GetLink(1)->SetQDot(0, 0, 0);
     //LinkConfig.GetLink(2)->SetQDot(0, 0, 0);
     //LinkConfig.GetLink(3)->SetQDot(0, 0, 0);
-    //LinkConfig.AddJointRevolute(0, 0, 0.0, 0.0, 1, -0.5, 0.0);
+    //LinkConfig.AddJointRevolute(0, 0, 0.0, 0.1, 1, -0.5, 0.0);
     //LinkConfig.AddJointRevolute(1, 1, 0.5, 0.0, 2, -2.0, 0.0);
     //LinkConfig.AddJointRevolute(2, 2, 2.0, 0.0, 3, 0.0, 0.0);
     //LinkConfig.AddJointPrismatic(3, 3, 0.0, -(0.1 + 1.0 * sin(theta1) + 4.0 * sin(theta2) + 0.0 * sin(theta3)),

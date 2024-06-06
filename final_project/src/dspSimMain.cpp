@@ -51,7 +51,7 @@ int main(void)
     //LinkConfig.AddJointRevolute(2, 2, 2.0, 0.0, 3, 0.0, 0.0);
     //LinkConfig.AddJointPrismatic(3, 3, 0.0, -(0.1 + 1.0 * sin(theta1) + 4.0 * sin(theta2) + 0.0 * sin(theta3)),
     //                             0, 1.0 * cos(theta1) + 4.0 * cos(theta2) + 0.0 * cos(theta3), 0.0,
-    //                             0.5);
+    //                             0.0); //angle
 
     dspSolver Solver(LinkConfig);
     Eigen::VectorXd Constraint_error;

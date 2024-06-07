@@ -4,3 +4,5 @@ Point Q in each link's local coordinate is on translational axis (prismatic join
 -- 2023.06.06  --  
 Axis angle of crack-shaft system's prismatic joint is modified to 0.0 for same week9 practice session's condition.  
 Joint(between 0th link and 1st link) position of crack-shaft system is modified for complete constraint condition.  (y position in 0th link coordienate becomes 0.1)
+-- 2023.06.07  --  
+Problem 3's hidden cases will be closed loop system.  
